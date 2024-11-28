@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="forms.css" media="screen" />
+</head>
+<body>
+
+    <form action="#" method="post">
+        <div class="form-container">
+
+            <!-- Introdução -->
+            <div class="introdução">
+                <h1>Formulário</h1>
+                <h3>Pesquisa de satisfação de navegação</h3>
+                <pre>
+Formulário criado por Giovanna Oliveira 
+para atividade de Glauco Roberto, professor da 
+área técnica IOT, Senac Nações Unidas.
+Por favor, preencha o forms e dê sua nota e
+comentário pata tal.
+                </pre>
+            </div>
+
+            <!-- Seção de Informações Básicas -->
+            <fieldset>
+                <legend>Informações Básicas</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <div class="field radiobox">
+                    <label>Gênero:</label>
+                    <label><input type="radio" name="genero" value="masculino" required> Masculino</label>
+                    <label><input type="radio" name="genero" value="feminino" required> Feminino</label>
+                    <label><input type="radio" name="genero" value="outro" required> Outro</label>
+                </div>
+            </fieldset>
+
+            <!-- Seção de Informações Pessoais -->
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco">
+
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade">
+
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado">
+
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep">
+            </fieldset>
+
+            <!-- Seção de Feedback -->
+            <fieldset>
+                <legend>FeedBack</legend>
+                <label for="comentarios">Comentários:</label>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+            </fieldset>
+
+<!-- Avaliação por estrelas -->
+<!--SVG: O SVG representa graficamente as estrelas, permitindo uma interação visual.-->
+<!--Inputs de Avaliação: Cada input representa uma opção de avaliação, de 1 a 5 estrelas. O value define a nota correspondente.-->
+
+<div class="radio">
+  <!-- Input para a avaliação de 5 estrelas -->
+  <input value="5" name="rating" type="radio" id="rating-5" />
+  <label title="5 stars" for="rating-5">
+      <!-- SVG representando uma estrela -->
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+      </svg>
+  </label>
+
+  <!-- Input para a avaliação de 4 estrelas -->
+  <input value="4" name="rating" type="radio" id="rating-4" />
+  <label title="4 stars" for="rating-4">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+      </svg>
+  </label>
+
+  <!-- Input para a avaliação de 3 estrelas -->
+  <input value="3" name="rating" type="radio" id="rating-3" />
+  <label title="3 stars" for="rating-3">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+      </svg>
+  </label>
+
+  <!-- Input para a avaliação de 2 estrelas -->
+  <input value="2" name="rating" type="radio" id="rating-2" />
+  <label title="2 stars" for="rating-2">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+      </svg>
+  </label>
+
+  <!-- Input para a avaliação de 1 estrela -->
+  <input value="1" name="rating" type="radio" id="rating-1" />
+  <label title="1 star" for="rating-1">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+      </svg>
+  </label>
+</div>
+
+
+          <!-- Botão de envio -->
+          <pre id="informacao"></pre>
+          <button type="subit" onclick="salvarInformacao()">Enviar</button>
+
+          <script>
+            function salvarInformacao() {
+                // Coletando os dados do formulário
+                const nome = document.getElementById('nome').value;
+                const email = document.getElementById('email').value;
+                const genero = document.querySelector('input[name="genero"]:checked').value;
+                const endereco = document.getElementById('endereco').value;
+                const cidade = document.getElementById('cidade').value;
+                const estado = document.getElementById('estado').value;
+                const cep = document.getElementById('cep').value;
+                const comentarios = document.getElementById('comentarios').value;
+                const rating = document.querySelector('input[name="rating"]:checked').value;
+            
+                // Criando o conteúdo do arquivo
+                const conteudo = `Nome: ${nome}\nEmail: ${email}\nGênero: ${genero}\nEndereço: ${endereco}\nCidade: ${cidade}\nEstado: ${estado}\nCEP: ${cep}\nComentários: ${comentarios}\nAvaliação: ${rating}\n`;
+            
+                // Criando um Blob com o conteúdo
+                const blob = new Blob([conteudo], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+            
+                // Criando um link para download
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'dadosforms.txt';
+                document.body.appendChild(a);
+                a.click();
+            
+                // Removendo o link do DOM
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url); // Liberar a URL criada
+            }
+            </script>
+            
+
+      </div>
+  </form>
+
+</body>
+</html>
