@@ -1,0 +1,263 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo Global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #67f57d;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.header .text h1 {
+    font-size: 2em;
+    color: #000;
+}
+
+.header .text p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Menu de Navegação */
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Imagem de Parallax */
+.container {
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    filter: brightness(50%);
+
+}
+
+.section {
+    position: relative;
+    height: 100vh; /* Cobre a altura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px #ffffff;
+    overflow: hidden;
+    width: 100vw; /* Cobre toda a largura da tela */
+}
+
+.bg1::after {
+    content: "";
+    background-image: url('fundosite.jpg');
+    opacity: 0.8;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Cobre 100% da largura da seção */
+    height: 100%; /* Cobre 100% da altura da seção */
+    z-index: -1;
+}
+
+.bg2::after {
+    content: "";
+    background-image: url('background2.jpg'); /* Adicione a imagem de fundo aqui */
+    opacity: 0.8;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+/* Conteúdo Principal */
+.inicio {
+    color: #000;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Galeria de Imagens */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 300px;
+    height: 300px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Seções Estáticas */
+.static {
+    background: rgb(143, 247, 160);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header .text h1 {
+        font-size: 1.5em;
+    }
+
+    .header .text p {
+        font-size: 1em;
+    }
+
+    .botao {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color: #333; /* Cor do fundo do menu */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+ 
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .curio:hover .dropdown-content {
+    display: block;
+  }
+  
+
+  .dropdown:hover .dropbtn {
+    background-color: #6f8aec;
+  }
+
+
+  .curiosidades {
+    position: relative;
+    display: inline-block;
+    font-size: 12;
+  }
+  
+  .curio {
+    background-color: #333; /* Cor do fundo do menu */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  
+  
+  }
+  
+  .sidade-content {
+    display: none;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+ position: absolute;
+  
+    
+  }
+
+  
+  .sidade-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    z-index: 1;
+  }
+  
+  .sidade-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .curiosidades:hover .sidade-content {
+    display: block;
+  }
+  
+  .curiosidades:hover .curio {
+    background-color: #6f8aec;
+  }
+  
+
+
+
+
+
