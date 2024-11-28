@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATEMÁTICA</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #eff2e8, #6f8aec, #ffff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: #fffefe;
+            color: #6f8aec;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-family: 'Scribble', cursive;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        nav a:hover {
+            background-color: #6f8aec80;
+            transform: scale(1.05);
+        }
+
+        /* Seção principal */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            gap: 20px;
+        }
+
+        .content {
+            max-width: 600px;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .image-caption {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* Seção 3 */
+#secao3 {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #ffffff;
+    text-align: center;
+}
+
+#secao3 h5 {
+    font-size: 1.5rem;
+    color: #ecf0f1;
+    margin-bottom: 15px;
+    font-weight: 250px;
+}
+
+
+        /* Seção do carrossel */
+        .carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .main-card {
+            background-color: #f0f0f0;
+            border-radius: 100%;
+            width: 600px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+
+        .main-card h5 {
+            margin-top: 15px;
+            color: #a29bfe;
+        }
+
+        .small-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .small-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .small-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .small-card:hover {
+            transform: scale(1.1);
+        }
+
+        .small-card span {
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Ciências Naturais e suas Tecnologias</h1>
+        <nav>
+            <a href="Integrada IOT - Site.html" class="active">Home</a>
+            <a href="#jornada">Minha Jornada</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Seção principal -->
+    <div class="container">
+        <div class="content">
+            <h2>Calcular, analisar, solucionar</h2>
+            <hr>
+            <p>
+                Aqui, o raciocínio lógico e a precisão se unem para desvendar os 
+                padrões e as estruturas que governam o mundo. No campo da Matemática, 
+                você aprende a lidar com números, formas, e relações, desenvolvendo a capacidade 
+                de resolver problemas complexos e de encontrar soluções eficientes para desafios cotidianos. 
+            </p>
+        </div>
+        <div class="image-container">
+            <img src="image-MAT.png" alt="Imagem de esportes">
+        </div>
+    </div>
+
+    <!-- Carrossel -->
+    <section class="carousel-container">
+        <div class="main-card">
+            <img id="main-image" src="bale.jpg" alt="Helen Lee">
+            <h5 id="main-title">Helen Lee</h5>
+            <p id="main-description">
+                Helen começou a jornada no mundo do design gráfico e logo tornou-se palestrante em eventos globais.
+            </p>
+            <p class="image-caption" id="main-caption">Legenda: Imagem de destaque do palestrante Helen Lee.</p>
+        </div>
+        <div class="small-cards">
+            <div class="small-card" onclick="updateMainCard('Biologia', 'John iniciou sua jornada como designer gráfico e tornou-se palestrante.', 'iot.webp', 'John Doe apresentando sobre Internet das Coisas.')">
+                <img src="iot.webp" alt="John Doe">
+                <span>Biologia</span>
+            </div>
+            <div class="small-card" onclick="updateMainCard('Jane Smith', 'Jane é uma engenheira de software apaixonada por IA.', 'iotflor.png', 'Jane Smith falando sobre inteligência artificial.')">
+                <img src="iotflor.png" alt="Jane Smith">
+                <span>Jane Smith</span>
+            </div>
+            <div class="small-card" onclick="updateMainCard('Michael Brown', 'Michael é um empreendedor focado em sustentabilidade.', 'iotesportes.jpg', 'Michael Brown em evento de sustentabilidade.')">
+                <img src="iotesportes.jpg" alt="Michael Brown">
+                <span>Michael Brown</span>
+            </div>
+            <div class="small-card" onclick="updateMainCard('Sarah Connor', 'Sarah é pioneira em tecnologias educacionais.', 'image-removebg-preview (8).png', 'Sarah Connor discutindo novas tecnologias educacionais.')">
+                <img src="image-removebg-preview (8).png" alt="Sarah Connor">
+                <span>Sarah Connor</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script para atualizar o conteúdo do card principal -->
+    <script>
+        function updateMainCard(title, description, imageUrl, caption) {
+            document.getElementById('main-image').src = imageUrl;
+            document.getElementById('main-title').innerText = title;
+            document.getElementById('main-description').innerText = description;
+            document.getElementById('main-caption').innerText = caption;
+        }
+    </script>
+
+<section id="secao3">
+    <h5>Cada disciplina oferece uma chave para desvendar os mistérios da natureza, 
+        permitindo uma jornada de descobertas e inovações. </h5>
+</section>
+
+</body>
+</html>
